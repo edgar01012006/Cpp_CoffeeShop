@@ -1,7 +1,7 @@
 #include <iostream>
 #include "include/Drink.hpp"
 
-std::string volumeToString(Drink::Size volume) {
+std::string Drink::volumeToString(Drink::Size volume) const {
     switch (volume) {
         case Drink::Size::Small: return "Small";
         case Drink::Size::Medium: return "Medium";

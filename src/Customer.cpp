@@ -2,7 +2,7 @@
 #include "include/Customer.hpp"
 
 Customer::Customer(const std::string& name, double balance) 
-    : m_name { name }, m_balance { balance }, m_currentOrder { nullptr } {}
+    : m_name { name }, m_balance { balance }, m_currentOrder {} {}
 
 std::string Customer::getName() const { return m_name; }
 double Customer::getBalance() const { return m_balance; }
