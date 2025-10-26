@@ -15,9 +15,8 @@ class CoffeeShop {
         std::vector<Barista*> m_baristas; // Aggregation
         std::vector<Customer*> m_queue;   // Association
 
-        void constructMenu();
-
     public:
+
         CoffeeShop() = default;
         CoffeeShop(const std::string& name);
 
@@ -35,6 +34,7 @@ class CoffeeShop {
         void addCustomerToQueue(Customer* customer);
         void serveNextCustomer();
         void showQueue() const;
+        std::vector<Customer*> getQueue() const;
 
         void displayShopInfo() const;
 };
