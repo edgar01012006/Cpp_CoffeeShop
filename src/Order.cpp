@@ -20,9 +20,8 @@ void Order::removeDrink(int index) {
 }
 
 void Order::calculateTotalPrice() { // currently useless 
-    int drinks_size = m_drinks.size();
     m_totalPrice = 0;
-    for (int i = 0; i < drinks_size; ++i) {
+    for (int i = 0; i < m_drinks.size(); ++i) {
         m_totalPrice += m_drinks[i].getPrice();
     }
 }
@@ -33,8 +32,7 @@ void Order::markPaid() { m_isPaid = true; }
 void Order::displayOrder() const {
     std::cout << "\nOrder Info Display\n";
     std::cout << "Order id: " << m_orderId << std::endl;
-    int drinks_size = m_drinks.size();
-    for (int i = 0; i < drinks_size; ++i) {
+    for (int i = 0; i < m_drinks.size(); ++i) {
         m_drinks[i].display();
     }
     std::cout << "TotalPrice: " << m_totalPrice << std::endl;

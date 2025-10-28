@@ -8,8 +8,7 @@ std::string CoffeeShop::getName() const { return m_shopName; }
 void CoffeeShop::setName(const std::string& newName) { m_shopName = newName; }
 
 void CoffeeShop::addDrink(Drink* drink) {
-    int menu_size = m_menu.size();
-    for (int i = 0; i < menu_size; ++i) {
+    for (int i = 0; i < m_menu.size(); ++i) {
         if (m_menu[i] == drink) {
             std::cout << "Drink already exists in the menu\n";
             return;
@@ -20,8 +19,7 @@ void CoffeeShop::addDrink(Drink* drink) {
 }
 
 void CoffeeShop::removeDrink(const std::string& drinkName) {
-    int menu_size = m_menu.size();
-    for (int i = 0; i < menu_size; ++i) {
+    for (int i = 0; i < m_menu.size(); ++i) {
         if (m_menu[i]->getName() == drinkName) {
             m_menu.erase(m_menu.begin() + i);
             std::cout << "Successfuly removed " << drinkName << "\n";
@@ -33,15 +31,13 @@ void CoffeeShop::removeDrink(const std::string& drinkName) {
 
 void CoffeeShop::showMenu() const {
     std::cout << "\nShowing all Menu items\n";
-    int menu_size = m_menu.size();
-    for (int i = 0; i < menu_size; ++i) {
+    for (int i = 0; i < m_menu.size(); ++i) {
         m_menu[i]->display();
     }
 }
 
 void CoffeeShop::hireBarista(Barista* barista) {
-    int baristas_size = m_baristas.size();
-    for (int i = 0; i < baristas_size; ++i) {
+    for (int i = 0; i < m_baristas.size(); ++i) {
         if (m_baristas[i] == barista) {
             std::cout << "Barista already works here\n";
             return;
@@ -52,8 +48,7 @@ void CoffeeShop::hireBarista(Barista* barista) {
 }
 
 void CoffeeShop::fireBarista(Barista* barista) {
-    int baristas_size = m_baristas.size();
-    for (int i = 0; i < baristas_size; ++i) {
+    for (int i = 0; i < m_baristas.size(); ++i) {
         if (m_baristas[i] == barista) {
             m_baristas.erase(m_baristas.begin() + i);
             std::cout << "Barista successfully removed\n";
@@ -65,8 +60,7 @@ void CoffeeShop::fireBarista(Barista* barista) {
 
 void CoffeeShop::showBaristas() const {
     std::cout << "\nShowing all baristas\n";
-    int baristas_size = m_baristas.size();
-    for (int i = 0; i < baristas_size; ++i) {
+    for (int i = 0; i < m_baristas.size(); ++i) {
         std::cout << m_baristas[i]->getName() << "\n";
     }
 }
@@ -81,8 +75,7 @@ void CoffeeShop::serveNextCustomer() {
 
 void CoffeeShop::showQueue() const {
     std::cout << "\nShowing queue\n";
-    int queue_size = m_queue.size();
-    for (int i = 0; i < queue_size; ++i) {
+    for (int i = 0; i < m_queue.size(); ++i) {
         std::cout << i << ": " << m_queue[i]->getName() << '\n';
     }
 }
